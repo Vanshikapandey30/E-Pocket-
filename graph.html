@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    
+    <script type="text/javascript">
+        window.onload = function() {
+            var dps = []; //dataPoints. 
+
+            var chart = new CanvasJS.Chart("chartContainer", {
+			
+                title: {
+                    text: "Accepting DataPoints from User Input"
+                },
+                data: [{
+                    type: "line",
+                    dataPoints: dps
+                }]
+            });
+
+            function addDataPointsAndRender() {
+                xValue = Number(document.getElementById("xValue").value);
+                yValue = Number(document.getElementById("yValue").value);
+                dps.push({
+                    x: xValue,
+                    y: yValue
+                });
+                chart.render();
+            }
+
+            var renderButton = document.getElementById("renderButton");
+            renderButton.addEventListener("click", addDataPointsAndRender);
+        }
+    </script>
+    <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+    <center>
+    <h2>Saving Amount:</h2>
+    <input id="xValue" type="number" step="any" placeholder="Enter your Saving"><br><br> <h2>Time-Interval:</h2>
+    <input id="yValue" type="number" step="any" placeholder="Enter the Time-Interval">
+	</center>
+    </div>
+    <div class="btn">
+    <br><center><button id="renderButton">Add DataPoint & Render</button></center>
+    <div id="chartContainer" style="height: 270px; width: 200%;">
+    </div>
+</body>
+    <!--**********************************TABLE******************************** -->
+    <!-- CSS files-->
+    <body>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- page content -->
+    <div style="text-align:right; font-size:18px; width:95%; margin-top:1%"><a href="https://stackfame.com/editable-html-table-using-javascript-jquery/" ><a href="https://stackfame.com/"></a></div>
+  <br>
+    <div class="table-responsive col-md-10" style="width: 200%;">
+
+<table class="table table-bordered table-striped table-hover table-condensed  text-center" id="DyanmicTable">
+	<thead>
+		<tr>
+			<th class="text-center">
+				Months
+			</th>
+			<th class="text-center">
+				Spend
+			</th>
+			<th class="text-center">
+				Saves
+			</th>
+			<th class="text-center">
+				<button id="addNewRow" class="btn btn-primary btn-sm">Add New Row</button>
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				Month 1
+			</td>
+			<td>
+				30,000
+			</td>
+			<td>
+				10,000
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Month 2
+			</td>
+			<td>
+				20,000
+			</td>
+			<td>
+			    20,000
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Month 3
+			</td>
+			<td>
+				10,000
+			</td>
+			<td>
+				30,000
+			</td>
+		</tr>
+		<tr>
+			<td>
+                Month 4
+			</td>
+			<td>
+				30,000
+			</td>
+			<td>
+				10,000
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+    <!--JS Files-->
+<script  src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="   crossorigin="anonymous"></script>
+<script src="bootstable.min.js"></script>
+<script>
+ $('#DyanmicTable').SetEditable({ $addButton: $('#addNewRow')});
+</script>
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+body{
+			background-color:#24303a;
+			color: white;
+}
+.button{
+box-shadow:  0 8px 16px 0 rgba(0,0,0,0.2), 0 6ps 20px 0 rgba(0,0,0,0.19);
+}
+h1{
+		text-align: center;
+		transition: all 4s ease-in-out;
+}
+h4{
+		text-align: center;
+		font-style: italic;
+}
+p{
+		color:white;
+}
+.save h2{
+		text-align: center;
+}
+p:hover{
+	background-color: black;
+	transition: ease-in-out;
+
+}
+.graph p{
+		text-align: center;
+}
+
+}
+.footer{
+			position: absolute;
+			margin-top: 300px;
+		}
+		.footer a{
+			color: #F5E53A;
+		}
+		.footer img{
+			width: 32px;
+			height: 32px;
+			vertical-align: center;
+		}
+		.footer .graphm{
+			align-items: center;
+}
+
+	

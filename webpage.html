@@ -1,0 +1,155 @@
+<html>
+<head>
+	<title>MainPage</title>
+	<link rel='stylesheet' href="css\webpage.css">
+</head>
+<body bgcolor=navyblue>
+	<header>
+	<div class="container mr-auto">
+		<img src='css/img/pocketlogo2.jpg' class='logo' width='50px'>
+		<nav>
+			<ul>
+				<a class="btn" href="video.html"><button class="button">Home</button></a>
+				<a class="btn" href="About Us.html"><button class="button">About Us</button></a>
+				<a class="btn" href="graph.html"><button class="button">My Savings</button></a>
+				<a class="btn" href="Savings.html"><button class="button">Example</button></a>
+				
+				</ul>
+			  </div>
+			</ul>
+	</div>
+	</header>
+
+<div class="center">
+	<h1>E-pocket</h1>
+	<h4>"Keeps you secure"</h4>
+</div>
+
+<center>
+	<button onclick="myFunction()">CLICK ME</button>
+	<p id="dem"></p>
+</center>
+<marquee>CLICK MY SAVINGS TO VIEW YOUR SAVINGS!</marquee>
+<script>
+	function myFunction() {
+  	var txt;
+  	var person = prompt("Please enter your name:", "XYZ");
+  	if (person == null || person == "") {
+    	txt = "Oopss! User cancelled the prompt.";
+  } else {
+    	txt = "Hey " + person + " Welcome to E-pocket, let's check where are you upto!!";
+  	}
+  	document.getElementById("dem").innerHTML = txt;
+	}
+</script>
+	<div class="img">
+		<img src='css/img/y.jpg' width='100%' height='500px'>
+	</div>
+
+	<div>
+		<h1 class='text'>Here We Are</h1>
+	</div>
+	
+<div class='first'>
+			<h1 align='left'>E-Pocket Management</h1>
+			<!--<form>
+				<center>
+					<table class="form">
+						<tr>
+							<td>	
+								INCOME
+							</td>
+							<td>
+								<input type="digit" placeholder="YOUR INCOME" INCOME="" required><br>
+							</td>
+						</tr>
+						<tr>
+							<td>	
+								FOOD EXPENCE:
+							</td>
+						<td>
+								<input type="digit" placeholder="food" food="" required><br>
+							</td>
+						</tr>-->
+			<h3>There are many, many ways that you can save money on your monthly or yearly entertainment and related costs. This is the first place that I recommend that people look to if they want to save more money or need to reduce their expenses. Here, we'll display your previous expenses in graphical form to keep the track on your saving.</h3>
+</div>
+<!--******************************************************HEADER SECTION ENDS*************************************************************************-->
+<style>
+	.grid { 
+	  
+	  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	  align-items: center;
+	  }
+	.grid img {
+	  border: 1px solid #ccc;
+	  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+	  max-width: 10%;
+	}
+</style>
+<main class="grid">
+    <center>
+	
+	  <img src="css/img/4.jpg" alt="Sample photo">
+	  <img src="css/img/1.jpg" alt="Sample photo">
+	  <img src="css/img/3.jpg" alt="Sample photo">  
+
+	</center>
+</main>
+	
+<div class="save">
+	<h2>WHAT YOU ARE UPTO?</h2>
+	<marquee>LET US KNOW YOUR EXPENCES!</marquee>
+<center>
+<div class="button">
+	<button type="button"
+	onclick="document.getElementById('demo').innerHTML = Date()">
+	Hey User, Click me to display Date and Time.
+	</button>
+	<p id="demo"></p>
+</div>
+</center>
+<!--**********************************FOOTER SECTION STARTS***************************************************************************-->
+<footer>
+	<center>
+		<div class="graphm">
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    	<script type="text/javascript">
+      		google.charts.load('current', {'packages':['bar']});
+      		google.charts.setOnLoadCallback(drawChart);
+      		function drawChart() {
+        	var data = google.visualization.arrayToDataTable([
+		
+         	 ['Year', 'Expenses', 'Profit'],
+         	 ['2017', 400, 200],
+         	 ['2018', 460, 250],
+         	 ['2019', 1120, 300],
+         	 ['2020', 540, 350]
+        	]);
+
+        var options = {
+          chart: {
+            title: 'Company Performance',
+            subtitle: 'Sales, Expenses, and Profit: 2014-2017',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+</script>
+	<div id="barchart_material" style="width: 500px; height: 300px;"></div></center>
+	
+	<div class="graph">
+  		<h1 align='center'>THE ABOVE GRAPH IS AN EXAMPLE THAT YOU CAN SEE YOUR DAILY EXPENCES</h1>
+		  <h5 align='center'>With our "Try it Yourself" editor, you can edit the source code and view the result</h5>
+		  <h1 align='center' >If you want to track your data <a href="graph.html"><i>Click here</i></a>.</h1>
+	</div>
+	<div class="copyright">
+			<center><img src='css/img/pocketlogo2.jpg' width='50px'>
+			<h4>Copyright © pocket Corp.</h4></center>
+	</divd>
+</footer>
+</body>
+</html>
